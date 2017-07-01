@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+.filelist li{
+	list-style-type:none;
+	/* margin-top:10px; */
+	}
+.filelist{
+	padding:0;
+	}
+
+.filename,.progressnum,.delfilebtn,.uploadbtn{
+	font-size:12px;
+	color:#666;
+	margin-left:10px;
+	}
+.progress{
+	 display:inline-block; 
+	 width:200px; 
+	 height:10px; 
+	 background-color:white;
+/* 	 border-radius:20px; */
+	 border:1px groove #666;
+	 vertical-align:middle;
+	 padding:0px;
+	 }
+.progressbar{
+	width:0;
+	height:10px;
+/* 	border-radius:20px; */
+	background:url(../images/jdt_副本.png) repeat-x center; 
+	}

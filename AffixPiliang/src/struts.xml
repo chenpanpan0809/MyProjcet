@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<package name="default" extends="struts-default">
+
+<!-- <action name="fileUpLoad" class="com.pan.files.action.ReceiveFiles">
+<result name="success">/login/success.jsp</result>
+<result name="error">/login/error.jsp</result>
+</action> -->
+
+
+<action name="excel_*" class="com.pan.files.action.ImportExcel" method="{1}"/>
+
+<!-- <action name="cops_*" class="com.kqco.action.{1}Action" method="{2}">
+		</action> -->
+
+</package>	
+	
+</struts>
