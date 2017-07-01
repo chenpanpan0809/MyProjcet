@@ -15,7 +15,6 @@
     background: #D0EEFF;
     border: 1px solid #99D3F5;
     border-radius: 4px;
-  /*   padding: 4px 12px; */
     overflow: hidden;
     color: #1E88C7;
     text-decoration: none;
