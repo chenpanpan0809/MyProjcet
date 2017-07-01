@@ -112,20 +112,18 @@ public class ImportExcel  {
 	           FileUtils.copyFile(files, savefile) ;
 	       //      String paremt =  excelToJson(savefile);
 	    LinkedHashMap<String, String> sjson =   excelTojson(savefile);
-	    JSONObject js = (JSONObject) JSON.parse(sjson.get("Sheet1"));
-     JSONArray    myJsonArray =JSONArray.fromObject(JSON.parse(sjson.get("Sheet1")));
+	
    //  JSON.parse(sjson.get("Sheet1"));
 	  //  myJsonArray  = new JSONArray(JSON.parseArray(sjson.get("Sheet1")));
-	 JSONObject jsonExcel =   createExcel(dirs+"\\结果列表.xls",myJsonArray);
+	// JSONObject jsonExcel =   createExcel(dirs+"\\结果列表.xls",myJsonArray);
 	           HttpServletResponse response = ServletActionContext.getResponse();
 	           
 	           response.setHeader("Content-type", "text/html;charset=UTF-8");  
 	         //这句话的意思，是告诉servlet用UTF-8转码，而不是用默认的ISO8859  
 	         response.setCharacterEncoding("UTF-8");  
 	           PrintWriter out = response.getWriter();
-	
-	     //    out.println(sjson);
-      out.println(jsonExcel);
+	          out.println(sjson);
+   //   out.println(jsonExcel);
 	    } 
 	   
 	    public static LinkedHashMap<String,String> excelTojson(File file) throws IOException, Exception {
@@ -211,6 +209,7 @@ public class ImportExcel  {
 	    }
 	 
 	   /* 
+	    * json数据写入到exel文件中
 	    src:定义下载的文件路径   
 	*/
 	    public static JSONObject createExcel(String src, JSONArray json) {
